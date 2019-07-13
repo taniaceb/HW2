@@ -8,19 +8,7 @@ namespace HW_Exercise2
         {
            int[] array, array2, array3, array4, array5, array6;
             int j, k, l, m, n;
-            // array = NumberChangeToArray(745931);
-            //  array2 = NumberChangeToArray(593176);
-            //  Console.WriteLine("Ar du array sutama:" + CheckTwoArrayElement(array, array2)); 
-
-            //  Console.WriteLine(CheckIsNumberDifferent(array));
-            //SortArrayElement(array);
-
-
-            //  foreach (int item in array)
-            //  {
-            //     Console.Write(item + " ");
-            //   }
-            
+                        
 
             for (int i = 100000; i < 999999; i++)
             {
@@ -36,7 +24,7 @@ namespace HW_Exercise2
                 {
                     
                     array = NumberChangeToArray(i);
-                    if (CheckIsNumberDifferent(array) == true)
+                    if (CheckIsNumberDifferent(array))
                     {
                         
                         array2 = NumberChangeToArray(j);
@@ -49,7 +37,7 @@ namespace HW_Exercise2
                         
                         array6 = NumberChangeToArray(n);
 
-                        if (CheckTwoArrayElement(array, array2) ==true && CheckTwoArrayElement(array, array3)==true && CheckTwoArrayElement(array, array4)== true&& CheckTwoArrayElement(array, array5)==true && CheckTwoArrayElement(array, array6)==true)
+                        if (CheckTwoArrayElement(array, array2) && CheckTwoArrayElement(array, array3) && CheckTwoArrayElement(array, array4) && CheckTwoArrayElement(array, array5) && CheckTwoArrayElement(array, array6))
                         {
                             Console.WriteLine("MAGIC NUMBER IS:  " + i );
                             Console.WriteLine("*2:  " + j);
@@ -125,9 +113,7 @@ namespace HW_Exercise2
             }
 
         }
-
-
-
+                
         static bool CheckTwoArrayElement(int[] array1, int[] array2)
         {
             int[] temp1, temp2;
