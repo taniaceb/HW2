@@ -6,8 +6,11 @@ namespace HW_Exercise2
     {
         static void Main(string[] args)
         {
-            int[] array;
+            int[] array, array2;
             array = NumberChangeToArray(745931);
+            array2 = NumberChangeToArray(593176);
+            Console.WriteLine("Ar du array sutama:" + CheckTwoArrayElement(array, array2)); 
+
             Console.WriteLine(CheckIsNumberDifferent(array));
             //SortArrayElement(array);
 
@@ -17,7 +20,20 @@ namespace HW_Exercise2
                 Console.Write(item + " ");
             }
 
+            for (int i = 100000; i < 999999; i++)
+            {
+                if ( ((i *= 2) < 999999) && ((i *= 3) < 999999) && ((i *= 4) < 999999) && ((i *= 5) < 999999) && ((i *= 6) < 999999))
+                {
+                    NumberChangeToArray(i);
+
+                }
+
+            }
+
         }
+
+        
+
 
 
         static int[] NumberChangeToArray(int number)
